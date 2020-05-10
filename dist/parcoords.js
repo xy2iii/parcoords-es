@@ -2070,7 +2070,17 @@
             }
             categoricalRange.push(categoricalRange[j - 1] + addBy);
           }
-          return d3Scale.scaleOrdinal().domain(domain).range(categoricalRange);
+
+          console.log('pc: config for ' + k, config.dimensions);
+          // Custom domain for strings.
+          if (config.dimensions[k].domain === undefined || config.dimensions[k].domain === null) {
+            console.log('no custom domain');
+            return d3Scale.scaleOrdinal().domain(domain).range(categoricalRange);
+          } else {
+            domain = config.dimensions[k].domain;
+            console.log('custom domain:', domain);
+            return d3Scale.scaleOrdinal().domain(domain).range(categoricalRange);
+          }
         }
       };
       Object.keys(config.dimensions).forEach(function (k) {

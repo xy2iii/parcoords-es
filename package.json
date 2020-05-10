@@ -1,7 +1,7 @@
 {
-  "name": "parcoord-es",
+  "name": "parcoord-es-fork-with-domain",
   "version": "2.2.10",
-  "description": "ES6 module of Parallel Coordinates, based on d3 v5 modules",
+  "description": "Fork of ES6 module of Parallel Coordinates, based on d3 v5 modules, with custom domains",
   "main": "dist/parcoords.js",
   "module": "dist/parcoords.esm.js",
   "jsnext:main": "dist/parcoords.esm.js",
